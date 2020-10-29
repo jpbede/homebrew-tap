@@ -20,6 +20,6 @@ class CleverreachBounceexport < Formula
   end
 
   test do
-    system "#{bin}/cleverreach-bounceexport --version"
+    system "#{bin}/cleverreach-bounceexport"
   end
 end
