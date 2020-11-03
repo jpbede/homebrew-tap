@@ -1,4 +1,4 @@
-# Jpbede Tap
+# My personal collection of tools
 
 ## How do I install these formulae?
 `brew install jpbede/tap/<formula>`
