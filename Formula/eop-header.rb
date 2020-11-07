@@ -2,16 +2,16 @@
 class EopHeader < Formula
   desc "Tool to decode Microsoft Exchange Online Protection header into a nice view"
   homepage "https://github.com/jpbede/eop-header"
-  version "0.0.3"
+  version "0.0.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jpbede/eop-header/releases/download/v0.0.3/eop-header_0.0.3_Darwin_x86_64.tar.gz"
-    sha256 "1d42edd4fd9bd8ba9a43cd4672f6cb32a07212928c3c3bbad9c5efa39896ff0f"
+    url "https://github.com/jpbede/eop-header/releases/download/v0.0.4/eop-header_0.0.4_Darwin_x86_64.tar.gz"
+    sha256 "45e7c561d64c73ecbb2fb9d0c73b739b41e85698b6c34b841e69d85445a5b585"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jpbede/eop-header/releases/download/v0.0.3/eop-header_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "d983df96ad91fb757f81f6bcb85bb5ad57417b39b81120fb1ef885f6beaa9d44"
+      url "https://github.com/jpbede/eop-header/releases/download/v0.0.4/eop-header_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "48f94c220f49cd394dad93ab6eb28b406688f44002d199c78e2f149b2670e945"
     end
   end
 
