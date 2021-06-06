@@ -5,28 +5,28 @@
 class LokiAuthProxy < Formula
   desc "Stateless Grafana Loki authentication proxy"
   homepage "https://github.com/jpbede/loki-auth-proxy"
-  version "0.2.1"
+  version "0.2.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.1/loki-auth-proxy_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "88d96ba5c9f06d00d66f35d03283332780e27351306ef87c633a2b8a20328581"
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.2/loki-auth-proxy_0.2.2_Darwin_x86_64.tar.gz"
+      sha256 "e251cf0045d4a939541ddec546a898b68774f7866fbf096d081bd54ecdd06fb5"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.1/loki-auth-proxy_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "43ba3355d004d51a4703a9b5a9050f94b9b610c28eb268a24db37c1eaedb5da9"
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.2/loki-auth-proxy_0.2.2_Darwin_arm64.tar.gz"
+      sha256 "248a49a0943bf148e5bc009dec2846ba2f11068a7c09779c2b391c6fe795958b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.1/loki-auth-proxy_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "76e3b70900d73eb3c7619e69ef8384bd6033074739832ed5bbe5797fa0c29dcb"
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.2/loki-auth-proxy_0.2.2_Linux_x86_64.tar.gz"
+      sha256 "9605567332c46d43b472b3cae5f02d6eea061fd77f2edae98980436ed0e1ef1b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.1/loki-auth-proxy_0.2.1_Linux_arm64.tar.gz"
-      sha256 "c73ac083fa59accca4c4ed547a18d8da06086d8a335207e04372f9b747514d5e"
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.2.2/loki-auth-proxy_0.2.2_Linux_arm64.tar.gz"
+      sha256 "3dccbbb5d1f22593b618ebc0ca6faae6e6011693f48fb2041fa83c4c5f965bd9"
     end
   end
 
