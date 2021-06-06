@@ -5,24 +5,29 @@
 class LokiAuthProxy < Formula
   desc "Stateless Grafana Loki authentication proxy"
   homepage "https://github.com/jpbede/loki-auth-proxy"
-  version "0.0.5"
+  version "0.1.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.0.5/loki-auth-proxy_0.0.5_Darwin_x86_64.tar.gz"
-    sha256 "06cfd99afb66ab83e3df0caf1b2cad8ebec19e3957c54b656172462d222814e5"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.1.0/loki-auth-proxy_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "33f380b408eca6f250880a07d8763043fe745e8ac20ca583a21832769b89f977"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.1.0/loki-auth-proxy_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "050211e49c2b1b235d4ce4a98909b2e334440e101f1ff38216416af57067fad6"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.0.5/loki-auth-proxy_0.0.5_Darwin_arm64.tar.gz"
-    sha256 "ab34e11bf9ba07774d644ba7826320045e68392a3386f8b3fffb11983d1e5455"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.0.5/loki-auth-proxy_0.0.5_Linux_x86_64.tar.gz"
-    sha256 "1f908aa5b8a11f020d04a931ccce4a9fac4eb2884352e80ed6a36c85993782be"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.0.5/loki-auth-proxy_0.0.5_Linux_arm64.tar.gz"
-    sha256 "206f1c3d074c1ca5a2666aba259e4dedf4e4071a129e3f567e1a4c77fc6add49"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.1.0/loki-auth-proxy_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "34c7ab124f24d916cb7e71e6174f372844a5d042f492ea80a9568eb30e045741"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jpbede/loki-auth-proxy/releases/download/v0.1.0/loki-auth-proxy_0.1.0_Linux_arm64.tar.gz"
+      sha256 "14d3525e957342e6034761879b8b20e10c38a57ed01965d47bd5ebde7a2c0cab"
+    end
   end
 
   def install
