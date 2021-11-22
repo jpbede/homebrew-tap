@@ -6,7 +6,6 @@ class EopHeader < Formula
   desc "Tool to decode Microsoft Exchange Online Protection header into a nice view"
   homepage "https://github.com/jpbede/eop-header"
   version "0.0.4"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/jpbede/eop-header/releases/download/v0.0.4/eop-header_0.0.4_Darwin_x86_64.tar.gz"
