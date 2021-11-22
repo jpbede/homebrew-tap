@@ -3,7 +3,6 @@ class CleverreachBounceexport < Formula
   desc "Tool to export bounces as CSV from CleverReach"
   homepage "https://github.com/jpbede/cleverreach-bounceexport"
   version "0.1.3"
-  bottle :unneeded
 
   if OS.mac?
     url "https://github.com/jpbede/cleverreach-bounceexport/releases/download/v0.1.3/cleverreach-bounceexport_0.1.3_Darwin_x86_64.tar.gz"
