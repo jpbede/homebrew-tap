@@ -5,20 +5,20 @@
 class Ratiocheck < Formula
   desc "Microservice to check image to content ration of HTML pages"
   homepage "https://github.com/jpbede/ratiocheck"
-  version "2022.7.4"
+  version "2022.8.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jpbede/ratiocheck/releases/download/2022.7.4/ratiocheck_2022.7.4_Darwin_arm64.tar.gz"
-      sha256 "4cb568becb68216912ec474f12a747f749d1168d6dfb70acb6180d9cb058e6d2"
+      url "https://github.com/jpbede/ratiocheck/releases/download/2022.8.0/ratiocheck_2022.8.0_Darwin_arm64.tar.gz"
+      sha256 "853e411ad285ac80265bd5d016e51ae319ed3ef719c5d81bca21f5db0c90d4e6"
 
       def install
         bin.install "ratiocheck"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpbede/ratiocheck/releases/download/2022.7.4/ratiocheck_2022.7.4_Darwin_x86_64.tar.gz"
-      sha256 "897f9e4ba4c6aa57b9b7e043e36c933077a5a6e9c666178bb574de3d400f5e03"
+      url "https://github.com/jpbede/ratiocheck/releases/download/2022.8.0/ratiocheck_2022.8.0_Darwin_x86_64.tar.gz"
+      sha256 "165485d7a05cac1b6cba1731ab7c5dfa2e77456d28f967480cf2113190aeb42e"
 
       def install
         bin.install "ratiocheck"
@@ -28,16 +28,16 @@ class Ratiocheck < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jpbede/ratiocheck/releases/download/2022.7.4/ratiocheck_2022.7.4_Linux_arm64.tar.gz"
-      sha256 "808cad4c6636b9930bfebe027e1407236bacf32b92cffc6a0b00e43cf10bfa84"
+      url "https://github.com/jpbede/ratiocheck/releases/download/2022.8.0/ratiocheck_2022.8.0_Linux_arm64.tar.gz"
+      sha256 "9de7532fe00d44d6d2e579491237070a81f6829c6929a604cdae82ff7517581f"
 
       def install
         bin.install "ratiocheck"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jpbede/ratiocheck/releases/download/2022.7.4/ratiocheck_2022.7.4_Linux_x86_64.tar.gz"
-      sha256 "6ab3ac147f1c2c43c97a9a52e7bd15ffb6f09dee8496e45f4271d8d331f959f3"
+      url "https://github.com/jpbede/ratiocheck/releases/download/2022.8.0/ratiocheck_2022.8.0_Linux_x86_64.tar.gz"
+      sha256 "bc097fd59e6e44c5b75e37188307da84062903754ab656f4b2918f16f38723f8"
 
       def install
         bin.install "ratiocheck"
